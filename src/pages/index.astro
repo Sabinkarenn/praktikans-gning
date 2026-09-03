@@ -3,122 +3,776 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Mig from "../assets/images/mig.png";
+import Sabina from "../assets/images/sabina.png";
+import Brand from "../assets/images/brand.png";
+import Adeno from "../assets/images/adeno.png";
+import Park from "../assets/images/park.png";
+import Logo from "../assets/images/logo.png";
+
 import Facebook from "../assets/images/fb.svg";
 import Linkedin from "../assets/images/linkedin.svg";
-import Billede1 from "../assets/images/billede1.png";
-import Billede2 from "../assets/images/billede2.png";
-import Billede3 from "../assets/images/billede3.png";
 ---
 
-<MainLayout title="Titel">
-  <div class="w-full min-h-screen flex">
-    <!-- Billede fastlåst til venstre, men stopper før footeren -->
-    <div class="w-1/2 h-screen sticky top-0">
-      <img
-        src={Mig.src}
-        alt="Sabina foran en bygning"
-        class="w-full h-full object-cover"
-      />
-    </div>
-
-    <!-- Tekstindhold til højre -->
-    <div class="w-1/2 ml-auto p-12 space-y-48">
-      <!-- Hero Section -->
-      <div class="min-h-screen flex flex-col justify-center">
-        <h1
-          class="text-2xl md:text-7xl font-extrabold text-red-600 leading-none tracking-tight text-center animate__animated animate__flash"
+<MainLayout title="Sabina Khan Nielsen — Portfolio">
+  <div class="font-sans w-full bg-green20 lg:flex">
+    <!-- =========================================
+     VENSTRE SIDE
+     FAST BILLEDE PÅ DESKTOP
+========================================== -->
+    <aside
+      class="hidden
+         lg:flex
+         lg:w-[40%]
+         lg:h-screen
+         lg:sticky
+         lg:top-0
+         items-center
+         justify-center
+         bg-green20
+         border-r-2
+         border-orange60
+         px-14
+         py-12"
+    >
+      <!-- Samlet blok -->
+      <div
+        class="w-full
+           max-w-[200px]
+           mx-auto
+           mt-20"
+      >
+        <!-- Lille titel over billedet -->
+        <div
+          class="flex
+             items-end
+             justify-between
+             mb-4"
         >
-          SABINA KHAN<br />SABINA KHAN<br />SABINA KHAN<br />
-          SABINA KHAN<br />SABINA KHAN
-        </h1>
+          <p
+            class="text-sm
+                 sm:text-base
+                 lg:text-xs
+                 font-bold
+                 tracking-[0.3em]
+                 text-orange60
+                 uppercase"
+          >
+            Digital Designer
+          </p>
+        </div>
 
-        <p class="text-lg font-bold mt-6 text-center">MULTIMEDIEDESIGNER</p>
-        <!-- Sociale ikoner -->
-        <div class="mt-4 flex justify-center space-x-6">
+        <!-- Billede -->
+        <img
+          src={Sabina.src}
+          alt="Sabina"
+          class="block
+         w-full
+         h-auto
+         border-2
+         border-orange60"
+        />
+
+        <!-- Kontakt -->
+        <div
+          class="flex
+         items-center
+         justify-start
+         gap-5
+         mt-4"
+        >
           <a
             href="https://www.linkedin.com/in/sabinakhannielsen/"
             target="_blank"
+            class="text-xs
+           font-bold
+           tracking-[0.12em]
+           text-orange60
+           uppercase
+           transition
+           duration-300
+           hover:opacity-60"
           >
-            <img src={Linkedin.src} alt="Linkedin icon" class="w-8 h-8" />
+            LinkedIn ↗
           </a>
-          <a href="https://www.facebook.com/morgenfreeman01/" target="_blank">
-            <img src={Facebook.src} alt="Facebook icon" class="w-8 h-8" />
+
+          <a
+            href="mailto:sabina.nielsen11@gmail.com"
+            class="text-xs
+           font-bold
+           tracking-[0.12em]
+           text-orange60
+           uppercase
+           transition
+           duration-300
+           hover:opacity-60"
+          >
+            Mail ↗
           </a>
         </div>
       </div>
+    </aside>
 
-      <!-- Om Mig Section -->
-      <div
-        id="om-mig"
-        class="min-h-screen flex flex-col justify-center text-center"
+    <!-- =========================================
+         HØJRE SIDE
+         ALT INDHOLD SCROLLER HER
+    ========================================== -->
+    <main class="w-full
+             lg:w-[60%]
+             bg-white">
+      <!-- =========================================
+     HERO
+========================================== -->
+      <section
+        class="min-h-[85vh]
+         lg:min-h-screen
+         flex
+         flex-col
+         justify-center
+         items-center
+         text-center
+         px-6
+         sm:px-8
+         lg:px-10
+         xl:px-12
+         py-16"
       >
-        <h2
-          class="text-6xl font-extrabold text-red-600 mb-6 animate__animated animate__flash"
+        <!-- Lille label -->
+        <p
+          class="text-xs
+           sm:text-sm
+           font-bold
+           tracking-[0.3em]
+           text-orange60
+           uppercase
+           mb-7"
         >
-          OM MIG
-        </h2>
-        <div class="scroll-target">
-          <p class="text-lg text-black text-left mt-4 mb-4">
-            Mit navn er Sabina, og jeg bor på Østerbro. Jeg studerer
-            Multimediedesign på KEA, hvor jeg kombinerer min kreativitet med
-            digitalt design og programmering. Tidligere arbejdede jeg som
-            eventkoordinator, da jeg elsker at skabe arrangementer, der samler
-            mennesker. <br />
-            <br /> Min passion for æstetik og funktionalitet førte mig dog i en ny
-            retning, hvor jeg nu designer visuelle og brugervenlige løsninger. Mine
-            venner vil beskrive mig som glad, rolig og karismatisk – og jeg trives
-            med at tage initiativ og bygge stærke fællesskaber.
-          </p>
-        </div>
-      </div>
+          Portfolio · 2026
+        </p>
 
-      <!-- Designstil Section -->
-      <div
-        id="designstil"
-        class="min-h-screen flex flex-col justify-center text-center"
+        <!-- Navn -->
+        <h1
+          class="font-display
+           w-full
+           text-[clamp(3rem,5.2vw,6.5rem)]
+           text-orange60
+           leading-[0.95]
+           tracking-[-0.025em]
+           uppercase
+           overflow-hidden
+           text-center"
+        >
+          <span
+            class="hero-name-left
+             block
+             whitespace-nowrap"
+          >
+            Sabina Khan
+          </span>
+
+          <span
+            class="hero-name-right
+             block
+             whitespace-nowrap"
+          >
+            Nielsen
+          </span>
+        </h1>
+
+        <!-- Linje -->
+        <div
+          class="w-16
+           lg:w-20
+           h-[2px]
+           bg-orange60
+           mt-8
+           mb-7
+           mx-auto"
+        >
+        </div>
+
+        <!-- Beskrivelse -->
+        <p
+          class="max-w-md
+           mx-auto
+           text-sm
+           sm:text-base
+           leading-relaxed
+           tracking-[0.04em]
+           text-orange60
+           text-center"
+        >
+          Digital concepts, visual design & user experiences.
+        </p>
+      </section>
+
+      <!-- =========================================
+           BILLEDE PÅ MOBIL
+      ========================================== -->
+      <section
+        class="lg:hidden
+               w-full
+               bg-green20
+               border-y-2
+               border-orange60
+               px-8
+               sm:px-12
+               py-14"
       >
-        <h2
-          class="text-6xl font-extrabold text-red-600 mb-6 animate__animated animate__flash"
-        >
-          DESIGNSTIL
-        </h2>
-        <div class="scroll-target">
-          <p class="text-lg text-black text-left mt-4 mb-4">
-            Min designstil er en blanding af minimalisme, brutalistisk æstetik
-            og moderne trends. Jeg elsker at holde det simpelt, men altid med et
-            twist, der skaber noget unikt. Rene linjer og funktionalitet er
-            vigtige for mig, men jeg eksperimenterer også med kontraster og
-            uventede detaljer, der giver mit design kant. <br /><br />Jeg
-            stræber efter at skabe visuelle løsninger, der føles både rå og
-            sofistikerede – en balance mellem det upræcise og det gennemførte.
-          </p>
+        <div class="w-full max-w-[350px] mx-auto">
+          <img src={Sabina.src} alt="Sabina" class="block w-full h-auto" />
+
+          <div class="flex items-center gap-5 mt-4">
+            <a
+              href="https://www.linkedin.com/in/sabinakhannielsen/"
+              target="_blank"
+              class="text-sm
+                     font-bold
+                     tracking-[0.15em]
+                     text-orange60
+                     uppercase
+                     hover:opacity-60"
+            >
+              LinkedIn ↗
+            </a>
+
+            <a
+              href="mailto:DINMAIL@EMAIL.DK"
+              class="text-sm
+                     font-bold
+                     tracking-[0.15em]
+                     text-orange60
+                     uppercase
+                     hover:opacity-60"
+            >
+              Mail ↗
+            </a>
+          </div>
         </div>
-        <!-- Karrussel -->
+      </section>
 
-        <script>
-          const images = [
-            "../assets/images/billede1.png",
-            "../assets/images/billede2.png",
-            "../assets/images/billede3.png",
-          ];
+      <!-- =========================================
+     ABOUT ME
+========================================== -->
+      <section
+        id="about-me"
+        class="min-h-[80vh]
+         lg:min-h-screen
+         flex
+         items-center
+         px-6
+         sm:px-8
+         lg:px-10
+         xl:px-12
+         py-20
+         lg:py-24"
+      >
+        <div
+          class="scroll-target
+           w-full
+           max-w-xl
+           mx-auto
+           text-left"
+        >
+          <!-- Overskrift -->
+          <h2
+            class="font-display
+             text-3xl
+             sm:text-4xl
+             lg:text-4xl
+             tracking-[0.05em]
+             text-orange60
+             leading-tight
+             uppercase"
+          >
+            About me
+          </h2>
 
-          let index = 0;
-          const imgElement = document.getElementById("carousel");
-          imgElement.src = images[0]; // Sætter første billede
+          <!-- Linje -->
+          <div
+            class="w-16
+             sm:w-20
+             h-[2px]
+             bg-orange60
+             mt-6
+             mb-8"
+          >
+          </div>
 
-          function nextImage() {
-            index = (index + 1) % images.length;
-            imgElement.style.opacity = "0";
+          <!-- Tekst -->
+          <p
+            class="text-base
+             sm:text-lg
+             lg:text-lg
+             text-black
+             leading-relaxed"
+          >
+            My name is Sabina, and I study Digital Concept Development at
+            Copenhagen School of Design and Technology, where I combine
+            creativity, digital design and development. Before moving into
+            design, I worked as an event coordinator, creating experiences that
+            brought people together.
 
-            setTimeout(() => {
-              imgElement.src = images[index];
-              imgElement.style.opacity = "1";
-            }, 100);
-          }
+            <br /><br />
 
-          setInterval(nextImage, 800);
-        </script>
-      </div>
-    </div>
-  </div>
-</MainLayout>
+            My interest in aesthetics, functionality and user experience
+            eventually led me towards digital design. Today, I enjoy creating
+            visual and user-friendly solutions that balance creativity with
+            functionality. I am naturally calm, curious and proactive, and I
+            thrive in collaborative environments where ideas can grow into
+            meaningful experiences.
+          </p>
+
+          <!-- SKILLS -->
+          <div class="mt-12 sm:mt-16">
+            <p
+              class="text-xs
+               sm:text-sm
+               font-bold
+               tracking-[0.25em]
+               text-orange60
+               uppercase
+               mb-5"
+            >
+              Skills
+            </p>
+
+            <ul
+              class="grid
+               grid-cols-1
+               sm:grid-cols-2
+               border-t
+               border-orange60"
+            >
+              <li
+                class="py-3
+                 border-b
+                 border-orange60
+                 uppercase
+                 tracking-[0.08em]"
+              >
+                UX / UI Design
+              </li>
+
+              <li
+                class="py-3
+                 sm:pl-6
+                 border-b
+                 border-orange60
+                 uppercase
+                 tracking-[0.08em]"
+              >
+                Graphic Design
+              </li>
+
+              <li
+                class="py-3
+                 border-b
+                 border-orange60
+                 uppercase
+                 tracking-[0.08em]"
+              >
+                Digital Concept Development
+              </li>
+
+              <li
+                class="py-3
+                 sm:pl-6
+                 border-b
+                 border-orange60
+                 uppercase
+                 tracking-[0.08em]"
+              >
+                Figma
+              </li>
+
+              <li
+                class="py-3
+                 border-b
+                 border-orange60
+                 uppercase
+                 tracking-[0.08em]"
+              >
+                HTML / CSS
+              </li>
+
+              <li
+                class="py-3
+                 sm:pl-6
+                 border-b
+                 border-orange60
+                 uppercase
+                 tracking-[0.08em]"
+              >
+                Adobe Creative Cloud
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- =========================================
+     PROJECTS
+========================================== -->
+      <section
+        id="projects"
+        class="px-6
+         sm:px-8
+         lg:px-10
+         xl:px-12
+         py-20
+         sm:py-24
+         lg:py-32"
+      >
+        <div
+          class="scroll-target
+           w-full
+           max-w-xl
+           mx-auto
+           text-left"
+        >
+          <!-- Overskrift -->
+          <h2
+            class="font-display
+             text-3xl
+             sm:text-4xl
+             lg:text-4xl
+             tracking-[0.05em]
+             text-orange60
+             leading-tight
+             uppercase"
+          >
+            Projects
+          </h2>
+
+          <!-- Linje -->
+          <div
+            class="w-16
+             sm:w-20
+             h-[2px]
+             bg-orange60
+             mt-6
+             mb-16
+             sm:mb-20"
+          >
+          </div>
+
+          <!-- =========================================
+     PROJECT 01
+========================================== -->
+          <article class="mb-28 sm:mb-32 lg:mb-36">
+            <!-- Billede -->
+            <a
+              href="https://robust-raven-42808420.figma.site"
+              target="_blank"
+              class="block w-full"
+            >
+              <img
+                src={Park.src}
+                alt="Parkfortællinger"
+                class="block
+             w-full
+             h-auto
+             object-contain
+             transition-all
+             duration-300
+             ease-out
+             hover:opacity-80
+             hover:brightness-95"
+              />
+            </a>
+
+            <!-- Tekst -->
+            <div class="mt-9 sm:mt-10">
+              <!-- Kategori -->
+              <p
+                class="text-xs
+             font-bold
+             tracking-[0.25em]
+             text-orange60
+             uppercase
+             mb-4"
+              >
+                01 — Digital Concept Development
+              </p>
+
+              <!-- Projektnavn -->
+              <h3
+                class="font-display
+             text-2xl
+             sm:text-3xl
+             text-orange60
+             leading-tight"
+              >
+                Parkfortællinger
+              </h3>
+
+              <!-- Beskrivelse -->
+              <p
+                class="text-base
+             sm:text-lg
+             leading-relaxed
+             mt-5
+             max-w-lg"
+              >
+                A digital concept developed for Parkmuseerne as my exam project,
+                focusing on creating a stronger connection between the parks and
+                museums through storytelling, audio experiences and interactive
+                routes.
+              </p>
+
+              <!-- Knap -->
+              <a
+                href="https://robust-raven-42808420.figma.site"
+                target="_blank"
+                class="inline-block
+             mt-7
+             bg-orange60
+             text-white
+             border-2
+             border-orange60
+             px-6
+             py-2
+             text-sm
+             font-bold
+             uppercase
+             tracking-[0.18em]
+             transition
+             duration-300
+             hover:bg-primaryblue60
+             hover:text-orange60"
+              >
+                View project →
+              </a>
+            </div>
+          </article>
+
+          <!-- =========================================
+     PROJECT 02
+========================================== -->
+          <article class="mb-28 sm:mb-32 lg:mb-36">
+            <!-- Billede -->
+            <a
+              href="/src/assets/images/brandguidline"
+              target="_blank"
+              class="block w-full"
+            >
+              <img
+                src={Brand.src}
+                alt="Adeno Visual Identity"
+                class="block
+             w-full
+             border-2
+         border-orange40
+             h-auto
+             object-contain
+             transition-all
+             duration-300
+             ease-out
+             hover:opacity-80
+             hover:brightness-95"
+              />
+            </a>
+
+            <!-- Tekst -->
+            <div class="mt-9 sm:mt-10">
+              <!-- Kategori -->
+              <p
+                class="text-xs
+             font-bold
+             tracking-[0.25em]
+             text-orange60
+             uppercase
+             mb-4"
+              >
+                02 — Brand Identity & Design System
+              </p>
+
+              <!-- Projektnavn -->
+              <h3
+                class="font-display
+             text-2xl
+             sm:text-3xl
+             text-orange60
+             leading-tight"
+              >
+                Adeno Visual Identity
+              </h3>
+
+              <!-- Beskrivelse -->
+              <p
+                class="text-base
+             sm:text-lg
+             leading-relaxed
+             mt-5
+             max-w-lg"
+              >
+                I contributed to developing Adeno’s extended visual identity,
+                creating a brand guidelines book and defining everything from
+                the colour palette to graphic elements.
+              </p>
+
+              <!-- Knap -->
+              <a
+                href="/src/assets/images/brandguidline"
+                target="_blank"
+                class="inline-block
+             mt-7
+             bg-orange60
+             text-white
+             border-2
+             border-orange60
+             px-6
+             py-2
+             text-sm
+             font-bold
+             uppercase
+             tracking-[0.18em]
+             transition
+             duration-300
+             hover:bg-primaryblue60
+             hover:text-orange60"
+              >
+                View project →
+              </a>
+            </div>
+          </article>
+
+          <!-- =========================================
+     PROJECT 03
+========================================== -->
+          <article>
+            <!-- Billede -->
+            <a href="https://adeno.dk" target="_blank" class="block w-full">
+              <img
+                src={Adeno.src}
+                alt="Adeno Website"
+                class="block
+             w-full
+             h-auto
+             object-contain
+             transition-all
+             duration-300
+             ease-out
+             hover:opacity-80
+             hover:brightness-95"
+              />
+            </a>
+
+            <!-- Tekst -->
+            <div class="mt-9 sm:mt-10">
+              <!-- Kategori -->
+              <p
+                class="text-xs
+             font-bold
+             tracking-[0.25em]
+             text-orange60
+             uppercase
+             mb-4"
+              >
+                03 — Web Design & Prototyping
+              </p>
+
+              <!-- Projektnavn -->
+              <h3
+                class="font-display
+             text-2xl
+             sm:text-3xl
+             text-orange60
+             leading-tight"
+              >
+                Adeno Website
+              </h3>
+
+              <!-- Beskrivelse -->
+              <p
+                class="text-base
+             sm:text-lg
+             leading-relaxed
+             mt-5
+             max-w-lg"
+              >
+                Together with my colleague, I helped build this website using
+                Nordcraft. I was primarily responsible for the design process
+                and creating the prototype.
+              </p>
+
+              <!-- Knap -->
+              <a
+                href="https://adeno.dk"
+                target="_blank"
+                class="inline-block
+             mt-7
+             bg-orange60
+             text-white
+             border-2
+             border-orange60
+             px-6
+             py-2
+             text-sm
+             font-bold
+             uppercase
+             tracking-[0.18em]
+             transition
+             duration-300
+             hover:bg-primaryblue60
+             hover:text-orange60"
+              >
+                View project →
+              </a>
+            </div>
+          </article>
+          <!-- =========================================
+       HERO ANIMATION
+  ========================================== -->
+          <style>
+            .hero-name-left {
+              opacity: 0;
+              transform: translateX(-60px);
+              animation: heroFromLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1)
+                forwards;
+            }
+
+            .hero-name-right {
+              opacity: 0;
+              transform: translateX(60px);
+              animation: heroFromRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s
+                forwards;
+            }
+
+            @keyframes heroFromLeft {
+              from {
+                opacity: 0;
+                transform: translateX(-60px);
+              }
+
+              to {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            @keyframes heroFromRight {
+              from {
+                opacity: 0;
+                transform: translateX(60px);
+              }
+
+              to {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+              .hero-name-left,
+              .hero-name-right {
+                opacity: 1;
+                transform: none;
+                animation: none;
+              }
+            }
+          </style>
+        </div>
+      </section>
+    </main>
+  </div></MainLayout
+>

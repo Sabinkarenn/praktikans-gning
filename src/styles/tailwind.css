@@ -1,26 +1,39 @@
-@import 'tailwindcss';
+/* Google Fonts SKAL stå først */
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Raleway:wght@300;400;500;600;700;800&display=swap");
 
+/* Tailwind */
+@import "tailwindcss";
+
+/* Plugins */
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
-
 @theme {
-  /* Her tilføjes theme variable // tokens */
-}
+  /* Fonts */
+  --font-sans: "Raleway", sans-serif;
+  --font-display: "Michroma", sans-serif;
 
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
+  /* Blush */
+  --color-primaryblue20: #f7e9ec;
+  --color-primaryblue40: #f1dce1;
+  --color-primaryblue60: #e8cbd2;
+  --color-primaryblue80: #d9adb7;
+  --color-primaryblue100: #c48c99;
 
-@layer components{
+  /* Burgundy */
+  --color-orange20: #e8c8cd;
+  --color-orange40: #a96a76;
+  --color-orange60: #62242e;
+  --color-orange80: #4d1c24;
+  --color-orange100: #351319;
 
-}
-@layer utilities{
-  
+  /* Warm Cream / Sage */
+  --color-green20: #f5f0e4;
+  --color-green40: #ebe8dc;
+  --color-green60: #d9dfcf;
+  --color-green80: #bdc7b0;
+  --color-green100: #9ca98f;
+
+  /* Soft White */
+  --color-beige: #fcfbf9;
 }

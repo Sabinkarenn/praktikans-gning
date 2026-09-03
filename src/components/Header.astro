@@ -1,94 +1,302 @@
 ---
-import Button from "./Button.astro";
-import Link from "../components/Link.astro";
-import { useState } from "react";
+import Logo from "../assets/images/logo.png";
 ---
 
-<header class="bg-white border-b border-black py-4 px-6 lg:px-0 relative z-20">
-  <div
-    class="container mx-auto flex justify-between items-center relative border-b border-black pb-4"
-  >
-    <!-- Logo -->
-    <div
-      class="absolute left-2 top-1/2 transform -translate-y-1/2 text-red-600 font-bold text-xl"
+<header
+  class="font-body
+         fixed
+         top-0
+         left-0
+         w-full
+         bg-primaryblue20
+         border-b-2
+         border-orange60
+         py-4
+         px-6
+         z-50"
+>
+  <div class="w-full flex items-center justify-between relative min-h-[44px]">
+    <!-- =========================
+     LOGO - VENSTRE
+========================== -->
+    <a
+      href="/"
+      class="flex
+         items-center
+         transition
+         duration-300
+         hover:opacity-60"
+      aria-label="Go to homepage"
     >
-      SK
-    </div>
+      <img
+        src={Logo.src}
+        alt="Sabina Khan Nielsen logo"
+        class="block
+           w-auto
+           h-10
+           sm:h-11"
+      />
+    </a>
 
-    <!-- Navigation -->
-    <div class="relative flex-1 flex justify-end">
-      <nav class="hidden lg:flex items-center space-x-4 font-medium">
-        <a
-          href="#om-mig"
-          class="scroll-link border-2 border-red-600 px-6 py-2 rounded-full bg-white text-red-600 transition duration-300 hover:bg-red-600 hover:text-white"
-        >
-          Om mig
-        </a>
-        <a
-          href="#designstil"
-          class="scroll-link border-2 border-red-600 px-6 py-2 rounded-full bg-white text-red-600 transition duration-300 hover:bg-red-600 hover:text-white"
-        >
-          Designstil
-        </a>
-        <a
-          href="/cv.pdf"
-          target="_blank"
-          class="bg-red-600 text-white border-2 border-red-600 px-6 py-2 rounded-full font-medium transition duration-300 hover:bg-white hover:text-red-600"
-        >
-          Mit CV
-        </a>
-      </nav>
-    </div>
+    <!-- =========================
+         DESKTOP NAVIGATION
+    ========================== -->
+    <nav
+      class="hidden lg:flex
+             items-center
+             justify-end
+             gap-3"
+    >
+      <!-- About me -->
+      <a
+        href="#about-me"
+        class="scroll-link
+               bg-white
+               text-orange60
+               border-2 border-orange60
+               px-6 py-2
+               text-sm
+               font-bold
+               uppercase
+               tracking-[0.18em]
+               transition duration-300
+               hover:bg-orange60
+               hover:text-white"
+      >
+        About me
+      </a>
 
-    <!-- Burger menu til mobil -->
-    <button id="menu-toggle" class="lg:hidden flex flex-col space-y-1">
-      <span class="w-6 h-0.5 bg-black"></span>
-      <span class="w-6 h-0.5 bg-black"></span>
-      <span class="w-6 h-0.5 bg-black"></span>
+      <!-- Projects -->
+      <a
+        href="#projects"
+        class="scroll-link
+               bg-white
+               text-orange60
+               border-2 border-orange60
+               px-6 py-2
+               text-sm
+               font-bold
+               uppercase
+               tracking-[0.18em]
+               transition duration-300
+               hover:bg-orange60
+               hover:text-white"
+      >
+        Projects
+      </a>
+
+      <!-- CV - CTA -->
+      <a
+        href="/src/assets/images/CV.pdf"
+        target="_blank"
+        class="bg-orange60
+               text-white
+               border-2 border-orange60
+               px-6 py-2
+               text-sm
+               font-bold
+               uppercase
+               tracking-[0.18em]
+               transition duration-300
+               hover:bg-white
+               hover:text-orange60"
+      >
+        CV
+      </a>
+    </nav>
+
+    <!-- =========================
+         BURGER MENU
+    ========================== -->
+    <button
+      id="menu-toggle"
+      class="lg:hidden flex flex-col gap-1.5"
+      aria-label="Open menu"
+    >
+      <span class="w-7 h-0.5 bg-orange60"></span>
+      <span class="w-7 h-0.5 bg-orange60"></span>
+      <span class="w-7 h-0.5 bg-orange60"></span>
     </button>
   </div>
 
-  <!-- Mobilmenu -->
-  <nav
+  <!-- =========================
+       MOBILE MENU
+  ========================== -->
+  <div
     id="mobile-menu"
-    class="fixed top-0 right-0 w-2/3 h-full bg-white border-l border-black flex flex-col items-center p-8 transform translate-x-full transition-transform lg:hidden z-30"
+    class="fixed inset-0
+           bg-primaryblue20
+           z-[60]
+           translate-x-full
+           transition-transform
+           duration-300
+           lg:hidden"
   >
-    <button id="close-menu" class="absolute top-4 right-6 text-3xl"
-      >&times;</button
+    <!-- Logo i mobilmenu -->
+    <a
+      href="/"
+      class="absolute
+             top-6
+             left-6
+             transition
+             duration-300
+             hover:opacity-60"
+      aria-label="Go to homepage"
     >
-    <div class="flex flex-col space-y-6 mt-12 text-lg font-medium">
-      <a href="#om-mig" class="hover:opacity-70 transition">Om mig</a>
-      <a href="#designstil" class="hover:opacity-70 transition">Designstil</a>
-    </div>
-  </nav>
+      <img
+        src={Logo.src}
+        alt="Sabina Khan Nielsen logo"
+        class="block
+               w-auto
+               h-8"
+      />
+    </a>
 
+    <!-- Close -->
+    <button
+      id="close-menu"
+      class="absolute
+             top-6
+             right-6
+             text-orange60
+             text-4xl
+             font-light"
+      aria-label="Close menu"
+    >
+      ×
+    </button>
+
+    <!-- Mobile navigation -->
+    <nav
+      class="h-full
+             flex
+             flex-col
+             items-center
+             justify-center
+             gap-4
+             px-6"
+    >
+      <!-- About me -->
+      <a
+        href="#about-me"
+        class="scroll-link mobile-link
+               w-full max-w-xs
+               text-center
+               bg-white
+               text-orange60
+               border-2 border-orange60
+               px-6 py-3
+               text-base
+               font-bold
+               uppercase
+               tracking-[0.18em]
+               transition duration-300
+               hover:bg-orange60
+               hover:text-white"
+      >
+        About me
+      </a>
+
+      <!-- Projects -->
+      <a
+        href="#projects"
+        class="scroll-link mobile-link
+               w-full max-w-xs
+               text-center
+               bg-white
+               text-orange60
+               border-2 border-orange60
+               px-6 py-3
+               text-base
+               font-bold
+               uppercase
+               tracking-[0.18em]
+               transition duration-300
+               hover:bg-orange60
+               hover:text-white"
+      >
+        Projects
+      </a>
+
+      <!-- CV -->
+      <a
+        href="/cv.pdf"
+        target="_blank"
+        class="w-full max-w-xs
+               text-center
+               bg-orange60
+               text-white
+               border-2 border-orange60
+               px-6 py-3
+               text-base
+               font-bold
+               uppercase
+               tracking-[0.18em]
+               transition duration-300
+               hover:bg-white
+               hover:text-orange60"
+      >
+        CV
+      </a>
+    </nav>
+  </div>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.getElementById("menu-toggle");
       const closeMenu = document.getElementById("close-menu");
       const menu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
 
-      // Åbner og lukker mobilmenu
-      menuToggle.addEventListener("click", function () {
-        menu.classList.remove("translate-x-full");
+      // Open mobile menu
+      if (menuToggle && menu) {
+        menuToggle.addEventListener("click", function () {
+          menu.classList.remove("translate-x-full");
+        });
+      }
+
+      // Close mobile menu
+      if (closeMenu && menu) {
+        closeMenu.addEventListener("click", function () {
+          menu.classList.add("translate-x-full");
+        });
+      }
+
+      // Close mobile menu after clicking a link
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          if (menu) {
+            menu.classList.add("translate-x-full");
+          }
+        });
       });
 
-      closeMenu.addEventListener("click", function () {
-        menu.classList.add("translate-x-full");
-      });
-
-      // Smooth scroll funktion
+      // Smooth scroll
       document.querySelectorAll(".scroll-link").forEach((link) => {
         link.addEventListener("click", function (e) {
           e.preventDefault();
-          const targetId = this.getAttribute("href").substring(1);
+
+          const href = this.getAttribute("href");
+
+          if (!href) return;
+
+          const targetId = href.substring(1);
+
           const targetElement = document.querySelector(
-            `#${targetId} .scroll-target`
+            `#${targetId} .scroll-target`,
           );
 
           if (targetElement) {
+            const headerOffset = 90;
+
+            const elementPosition =
+              targetElement.getBoundingClientRect().top + window.scrollY;
+
             window.scrollTo({
-              top: targetElement.offsetTop - 80, // Justerer så header ikke dækker
+              top: elementPosition - headerOffset,
               behavior: "smooth",
             });
           }
