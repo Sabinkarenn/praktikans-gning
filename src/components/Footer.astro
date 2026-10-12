@@ -24,28 +24,28 @@ import Logo from "../assets/images/logo.png";
            gap-5"
   >
     <!-- =========================
-     LOGO - VENSTRE
-========================== -->
+         LOGO - VENSTRE
+    ========================== -->
     <a
       href="/"
       class="flex
-         items-center
-         transition
-         duration-300
-         hover:opacity-60"
+             items-center
+             transition
+             duration-300
+             hover:opacity-60"
       aria-label="Go to homepage"
     >
       <img
         src={Logo.src}
         alt="Sabina Khan Nielsen logo"
         class="block
-           w-auto
-           h-10
-           sm:h-11"
+               w-auto
+               h-10
+               sm:h-11"
       />
     </a>
 
-    <!-- Links -->
+    <!-- LINKS -->
     <div
       class="flex
              items-center
@@ -53,10 +53,16 @@ import Logo from "../assets/images/logo.png";
              gap-5
              sm:gap-6"
     >
+      <!-- LinkedIn -->
       <a
         href="https://www.linkedin.com/in/sabinakhannielsen/"
         target="_blank"
-        class="text-xs
+        rel="noopener noreferrer"
+        class="group
+               flex
+               items-center
+               gap-1.5
+               text-xs
                sm:text-sm
                font-bold
                tracking-[0.15em]
@@ -66,12 +72,35 @@ import Logo from "../assets/images/logo.png";
                duration-300
                hover:opacity-60"
       >
-        LinkedIn ↗
+        LinkedIn
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          class="w-3.5
+                 h-3.5
+                 transition-transform
+                 duration-200
+                 group-hover:translate-x-0.5
+                 group-hover:-translate-y-0.5"
+          aria-hidden="true"
+        >
+          <path d="M7 17L17 7"></path>
+          <path d="M7 7h10v10"></path>
+        </svg>
       </a>
 
+      <!-- EMAIL -->
       <a
         href="mailto:sabina.nielsen11@gmail.com"
-        class="text-xs
+        class="group
+               flex
+               items-center
+               gap-1.5
+               text-xs
                sm:text-sm
                font-bold
                tracking-[0.15em]
@@ -81,13 +110,37 @@ import Logo from "../assets/images/logo.png";
                duration-300
                hover:opacity-60"
       >
-        Email ↗
+        Email
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          class="w-3.5
+                 h-3.5
+                 transition-transform
+                 duration-200
+                 group-hover:translate-x-0.5
+                 group-hover:-translate-y-0.5"
+          aria-hidden="true"
+        >
+          <path d="M7 17L17 7"></path>
+          <path d="M7 7h10v10"></path>
+        </svg>
       </a>
 
+      <!-- CV -->
       <a
         href="/cv.pdf"
         target="_blank"
-        class="text-xs
+        rel="noopener noreferrer"
+        class="group
+               flex
+               items-center
+               gap-1.5
+               text-xs
                sm:text-sm
                font-bold
                tracking-[0.15em]
@@ -97,17 +150,34 @@ import Logo from "../assets/images/logo.png";
                duration-300
                hover:opacity-60"
       >
-        CV ↗
+        CV
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          class="w-3.5
+                 h-3.5
+                 transition-transform
+                 duration-200
+                 group-hover:translate-x-0.5
+                 group-hover:-translate-y-0.5"
+          aria-hidden="true"
+        >
+          <path d="M7 17L17 7"></path>
+          <path d="M7 7h10v10"></path>
+        </svg>
       </a>
     </div>
 
-    <!-- Portfolio -->
+    <!-- PORTFOLIO -->
     <p
       class="text-[10px]
              sm:text-xs
              tracking-[0.1em]
              text-orange60
-             
              opacity-70"
     >
       Sabina Khan Nielsen 2026

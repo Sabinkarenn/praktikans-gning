@@ -150,53 +150,55 @@ import Linkedin from "../assets/images/linkedin.svg";
         </p>
 
         <!-- Navn -->
+
         <h1
           class="font-display
-         w-full
-         text-[2.25rem]
-         sm:text-[3rem]
-         lg:text-[clamp(3rem,5.2vw,6.5rem)]
-         text-orange60
-         leading-[0.95]
-         tracking-[-0.025em]
-         uppercase
-         overflow-hidden
-         text-center"
+    w-full
+    text-[1.8rem]
+    sm:text-[3rem]
+    lg:text-[clamp(3rem,5.2vw,6.5rem)]
+    text-orange60
+    leading-[0.95]
+    tracking-[-0.025em]
+    uppercase
+    overflow-hidden
+    text-center"
         >
           <span
             class="hero-name-left
-             block
-             whitespace-nowrap
-             font-bold"
+      block
+      whitespace-nowrap
+      font-bold"
           >
             Sabina Khan
           </span>
+        </h1>
 
-          <span
-            class="hero-name-right
+        <span
+          class="hero-name-right
              block
              font-bold
              whitespace-nowrap"
-          >
-            Nielsen
-          </span>
-        </h1>
+        >
+          Nielsen
+        </span>
+      </section>
 
-        <!-- Linje -->
-        <div
-          class="w-16
+      <!-- Linje -->
+      <div
+        class="w-16
            lg:w-20
            h-[2px]
            bg-orange60
            mt-8
            mb-7
            mx-auto"
-        >
-        </div>
+      >
+      </div>
 
-        <!-- Beskrivelse -->
-        <p
-          class="max-w-md
+      <!-- Beskrivelse -->
+      <p
+        class="max-w-md
            mx-auto
            text-sm
            sm:text-base
@@ -204,16 +206,16 @@ import Linkedin from "../assets/images/linkedin.svg";
            tracking-[0.04em]
            text-orange60
            text-center"
-        >
-          Digital concepts, visual design & user experiences.
-        </p>
-      </section>
+      >
+        Digital concepts, visual design & user experiences.
+      </p>
+    </main>
 
-      <!-- =========================================
+    <!-- =========================================
            BILLEDE PÅ MOBIL
       ========================================== -->
-      <section
-        class="lg:hidden
+    <section
+      class="lg:hidden
                w-full
                bg-green20
                border-y-2
@@ -221,45 +223,77 @@ import Linkedin from "../assets/images/linkedin.svg";
                px-8
                sm:px-12
                py-14"
-      >
-        <div class="w-full max-w-[350px] mx-auto">
-          <img src={Sabina.src} alt="Sabina" class="block w-full h-auto" />
+    >
+      <div class="w-full max-w-[350px] mx-auto">
+        <img src={Sabina.src} alt="Sabina" class="block w-full h-auto" />
 
-          <div class="flex items-center gap-5 mt-4">
-            <a
-              href="https://www.linkedin.com/in/sabinakhannielsen/"
-              target="_blank"
-              class="text-sm
-                     font-bold
-                     tracking-[0.15em]
-                     text-orange60
-                     uppercase
-                     hover:opacity-60"
-            >
-              LinkedIn ↗
-            </a>
+        <div class="flex items-center gap-5 mt-4">
+          <a
+            href="https://www.linkedin.com/in/sabinakhannielsen/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group
+           flex items-center gap-1.5
+           text-sm
+           font-bold
+           tracking-[0.15em]
+           text-orange60
+           uppercase
+           hover:opacity-60"
+          >
+            LinkedIn
 
-            <a
-              href="mailto:DINMAIL@EMAIL.DK"
-              class="text-sm
-                     font-bold
-                     tracking-[0.15em]
-                     text-orange60
-                     uppercase
-                     hover:opacity-60"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-3.5 h-3.5"
+              aria-hidden="true"
             >
-              Mail ↗
-            </a>
-          </div>
+              <path d="M7 17L17 7"></path>
+              <path d="M7 7h10v10"></path>
+            </svg>
+          </a>
+
+          <a
+            href="mailto:DINMAIL@EMAIL.DK"
+            class="group
+           flex items-center gap-1.5
+           text-sm
+           font-bold
+           tracking-[0.15em]
+           text-orange60
+           uppercase
+           hover:opacity-60"
+          >
+            Mail
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-3.5 h-3.5"
+              aria-hidden="true"
+            >
+              <path d="M7 17L17 7"></path>
+              <path d="M7 7h10v10"></path>
+            </svg>
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
+  </div>
 
-      <!-- =========================================
+  <!-- =========================================
      ABOUT ME
 ========================================== -->
-      <section
-        id="about-me"
-        class="min-h-[80vh]
+  <section
+    id="about-me"
+    class="min-h-[80vh]
          lg:min-h-screen
          flex
          items-center
@@ -269,17 +303,17 @@ import Linkedin from "../assets/images/linkedin.svg";
          xl:px-12
          py-20
          lg:py-24"
-      >
-        <div
-          class="scroll-target
+  >
+    <div
+      class="scroll-target
            w-full
            max-w-xl
            mx-auto
            text-left"
-        >
-          <!-- Overskrift -->
-          <h2
-            class="font-display
+    >
+      <!-- Overskrift -->
+      <h2
+        class="font-display
              text-3xl
              sm:text-4xl
              lg:text-4xl
@@ -287,155 +321,153 @@ import Linkedin from "../assets/images/linkedin.svg";
              text-orange60
              leading-tight
              uppercase"
-          >
-            About me
-          </h2>
+      >
+        About me
+      </h2>
 
-          <!-- Linje -->
-          <div
-            class="w-16
+      <!-- Linje -->
+      <div
+        class="w-16
              sm:w-20
              h-[2px]
              bg-orange60
              mt-6
              mb-8"
-          >
-          </div>
+      >
+      </div>
 
-          <!-- Tekst -->
-          <p
-            class="text-base
+      <!-- Tekst -->
+      <p
+        class="text-base
              sm:text-lg
              lg:text-lg
              text-black
              leading-relaxed"
-          >
-            My name is Sabina, and I study Digital Concept Development at
-            Copenhagen School of Design and Technology, where I combine
-            creativity, digital design and development. Before moving into
-            design, I worked as an event coordinator, creating experiences that
-            brought people together.
+      >
+        My name is Sabina, and I study Digital Concept Development at Copenhagen
+        School of Design and Technology, where I combine creativity, digital
+        design and development. Before moving into design, I worked as an event
+        coordinator, creating experiences that brought people together.
 
-            <br /><br />
+        <br /><br />
 
-            My interest in aesthetics, functionality and user experience
-            eventually led me towards digital design. Today, I enjoy creating
-            visual and user-friendly solutions that balance creativity with
-            functionality. I am naturally calm, curious and proactive, and I
-            thrive in collaborative environments where ideas can grow into
-            meaningful experiences.
-          </p>
+        My interest in aesthetics, functionality and user experience eventually
+        led me towards digital design. Today, I enjoy creating visual and
+        user-friendly solutions that balance creativity with functionality. I am
+        naturally calm, curious and proactive, and I thrive in collaborative
+        environments where ideas can grow into meaningful experiences.
+      </p>
 
-          <!-- SKILLS -->
-          <div class="mt-12 sm:mt-16">
-            <p
-              class="text-xs
+      <!-- SKILLS -->
+      <div class="mt-12 sm:mt-16">
+        <p
+          class="text-xs
                sm:text-sm
                font-bold
                tracking-[0.25em]
                text-orange60
                uppercase
                mb-5"
-            >
-              Skills
-            </p>
+        >
+          Skills
+        </p>
 
-            <ul
-              class="grid
+        <ul
+          class="grid
                grid-cols-1
                sm:grid-cols-2
                border-t
                border-orange60"
-            >
-              <li
-                class="py-3
+        >
+          <li
+            class="py-3
                  border-b
                  border-orange60
                  uppercase
                  tracking-[0.08em]"
-              >
-                UX / UI Design
-              </li>
+          >
+            UX / UI Design
+          </li>
 
-              <li
-                class="py-3
+          <li
+            class="py-3
                  sm:pl-6
                  border-b
                  border-orange60
                  uppercase
                  tracking-[0.08em]"
-              >
-                Graphic Design
-              </li>
+          >
+            Graphic Design
+          </li>
 
-              <li
-                class="py-3
+          <li
+            class="py-3
                  border-b
                  border-orange60
                  uppercase
                  tracking-[0.08em]"
-              >
-                Digital Concept Development
-              </li>
+          >
+            Digital Concept Development
+          </li>
 
-              <li
-                class="py-3
+          <li
+            class="py-3
                  sm:pl-6
                  border-b
                  border-orange60
                  uppercase
                  tracking-[0.08em]"
-              >
-                Figma
-              </li>
+          >
+            Figma
+          </li>
 
-              <li
-                class="py-3
+          <li
+            class="py-3
                  border-b
                  border-orange60
                  uppercase
                  tracking-[0.08em]"
-              >
-                HTML / CSS
-              </li>
+          >
+            HTML / CSS
+          </li>
 
-              <li
-                class="py-3
+          <li
+            class="py-3
                  sm:pl-6
                  border-b
                  border-orange60
                  uppercase
                  tracking-[0.08em]"
-              >
-                Adobe Creative Cloud
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- =========================================
+          >
+            Adobe Creative Cloud
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- =========================================
      PROJECTS
 ========================================== -->
-      <section
-        id="projects"
-        class="px-6
+  <section
+    id="projects"
+    class="px-6
          sm:px-8
          lg:px-10
          xl:px-12
          py-20
          sm:py-24
          lg:py-32"
-      >
-        <div
-          class="scroll-target
+  >
+    <div
+      class="scroll-target
            w-full
            max-w-xl
            mx-auto
            text-left"
-        >
-          <!-- Overskrift -->
-          <h2
-            class="font-display
+    >
+      <!-- Overskrift -->
+      <h2
+        class="font-display
              text-3xl
              sm:text-4xl
              lg:text-4xl
@@ -443,36 +475,36 @@ import Linkedin from "../assets/images/linkedin.svg";
              text-orange60
              leading-tight
              uppercase"
-          >
-            Projects
-          </h2>
+      >
+        Projects
+      </h2>
 
-          <!-- Linje -->
-          <div
-            class="w-16
+      <!-- Linje -->
+      <div
+        class="w-16
              sm:w-20
              h-[2px]
              bg-orange60
              mt-6
              mb-16
              sm:mb-20"
-          >
-          </div>
+      >
+      </div>
 
-          <!-- =========================================
+      <!-- =========================================
      PROJECT 01
 ========================================== -->
-          <article class="mb-28 sm:mb-32 lg:mb-36">
-            <!-- Billede -->
-            <a
-              href="https://robust-raven-42808420.figma.site"
-              target="_blank"
-              class="block w-full"
-            >
-              <img
-                src={Park.src}
-                alt="Parkfortællinger"
-                class="block
+      <article class="mb-28 sm:mb-32 lg:mb-36">
+        <!-- Billede -->
+        <a
+          href="https://robust-raven-42808420.figma.site"
+          target="_blank"
+          class="block w-full"
+        >
+          <img
+            src={Park.src}
+            alt="Parkfortællinger"
+            class="block
              w-full
              h-auto
              object-contain
@@ -481,53 +513,53 @@ import Linkedin from "../assets/images/linkedin.svg";
              ease-out
              hover:opacity-80
              hover:brightness-95"
-              />
-            </a>
+          />
+        </a>
 
-            <!-- Tekst -->
-            <div class="mt-9 sm:mt-10">
-              <!-- Kategori -->
-              <p
-                class="text-xs
+        <!-- Tekst -->
+        <div class="mt-9 sm:mt-10">
+          <!-- Kategori -->
+          <p
+            class="text-xs
              font-bold
              tracking-[0.25em]
              text-orange60
              uppercase
              mb-4"
-              >
-                01 — Digital Concept Development
-              </p>
+          >
+            01 — Digital Concept Development
+          </p>
 
-              <!-- Projektnavn -->
-              <h3
-                class="font-display
+          <!-- Projektnavn -->
+          <h3
+            class="font-display
              text-2xl
              sm:text-3xl
              text-orange60
              leading-tight"
-              >
-                Parkfortællinger
-              </h3>
+          >
+            Parkfortællinger
+          </h3>
 
-              <!-- Beskrivelse -->
-              <p
-                class="text-base
+          <!-- Beskrivelse -->
+          <p
+            class="text-base
              sm:text-lg
              leading-relaxed
              mt-5
              max-w-lg"
-              >
-                A digital concept developed for Parkmuseerne as my exam project,
-                focusing on creating a stronger connection between the parks and
-                museums through storytelling, audio experiences and interactive
-                routes.
-              </p>
+          >
+            A digital concept developed for Parkmuseerne as my exam project,
+            focusing on creating a stronger connection between the parks and
+            museums through storytelling, audio experiences and interactive
+            routes.
+          </p>
 
-              <!-- Knap -->
-              <a
-                href="https://robust-raven-42808420.figma.site"
-                target="_blank"
-                class="inline-block
+          <!-- Knap -->
+          <a
+            href="https://robust-raven-42808420.figma.site"
+            target="_blank"
+            class="inline-block
              mt-7
              bg-orange60
              text-white
@@ -543,26 +575,26 @@ import Linkedin from "../assets/images/linkedin.svg";
              duration-300
              hover:bg-primaryblue60
              hover:text-orange60"
-              >
-                View project →
-              </a>
-            </div>
-          </article>
+          >
+            View project →
+          </a>
+        </div>
+      </article>
 
-          <!-- =========================================
+      <!-- =========================================
      PROJECT 02
 ========================================== -->
-          <article class="mb-28 sm:mb-32 lg:mb-36">
-            <!-- Billede -->
-            <a
-              href="/src/assets/images/brandguidline.pdf"
-              target="_blank"
-              class="block w-full"
-            >
-              <img
-                src={Brand.src}
-                alt="Adeno Visual Identity"
-                class="block
+      <article class="mb-28 sm:mb-32 lg:mb-36">
+        <!-- Billede -->
+        <a
+          href="/src/assets/images/brandguidline.pdf"
+          target="_blank"
+          class="block w-full"
+        >
+          <img
+            src={Brand.src}
+            alt="Adeno Visual Identity"
+            class="block
              w-full
            border-2
              border-orange60
@@ -573,52 +605,52 @@ import Linkedin from "../assets/images/linkedin.svg";
              ease-out
              hover:opacity-80
              hover:brightness-95"
-              />
-            </a>
+          />
+        </a>
 
-            <!-- Tekst -->
-            <div class="mt-9 sm:mt-10">
-              <!-- Kategori -->
-              <p
-                class="text-xs
+        <!-- Tekst -->
+        <div class="mt-9 sm:mt-10">
+          <!-- Kategori -->
+          <p
+            class="text-xs
              font-bold
              tracking-[0.25em]
              text-orange60
              uppercase
              mb-4"
-              >
-                02 — Brand Identity & Design System
-              </p>
+          >
+            02 — Brand Identity & Design System
+          </p>
 
-              <!-- Projektnavn -->
-              <h3
-                class="font-display
+          <!-- Projektnavn -->
+          <h3
+            class="font-display
              text-2xl
              sm:text-3xl
              text-orange60
              leading-tight"
-              >
-                Adeno Visual Identity
-              </h3>
+          >
+            Adeno Visual Identity
+          </h3>
 
-              <!-- Beskrivelse -->
-              <p
-                class="text-base
+          <!-- Beskrivelse -->
+          <p
+            class="text-base
              sm:text-lg
              leading-relaxed
              mt-5
              max-w-lg"
-              >
-                I contributed to developing Adeno’s extended visual identity,
-                creating a brand guidelines book and defining everything from
-                the colour palette to graphic elements.
-              </p>
+          >
+            I contributed to developing Adeno’s extended visual identity,
+            creating a brand guidelines book and defining everything from the
+            colour palette to graphic elements.
+          </p>
 
-              <!-- Knap -->
-              <a
-                href="/src/assets/images/brandguidline.pdf"
-                target="_blank"
-                class="inline-block
+          <!-- Knap -->
+          <a
+            href="/src/assets/images/brandguidline.pdf"
+            target="_blank"
+            class="inline-block
              mt-7
              bg-orange60
              text-white
@@ -634,22 +666,22 @@ import Linkedin from "../assets/images/linkedin.svg";
              duration-300
              hover:bg-primaryblue60
              hover:text-orange60"
-              >
-                View project →
-              </a>
-            </div>
-          </article>
+          >
+            View project →
+          </a>
+        </div>
+      </article>
 
-          <!-- =========================================
+      <!-- =========================================
      PROJECT 03
 ========================================== -->
-          <article>
-            <!-- Billede -->
-            <a href="https://adeno.dk" target="_blank" class="block w-full">
-              <img
-                src={Adeno.src}
-                alt="Adeno Website"
-                class="block
+      <article>
+        <!-- Billede -->
+        <a href="https://adeno.dk" target="_blank" class="block w-full">
+          <img
+            src={Adeno.src}
+            alt="Adeno Website"
+            class="block
                 border-2
              border-orange60
              w-full
@@ -660,52 +692,52 @@ import Linkedin from "../assets/images/linkedin.svg";
              ease-out
              hover:opacity-80
              hover:brightness-95"
-              />
-            </a>
+          />
+        </a>
 
-            <!-- Tekst -->
-            <div class="mt-9 sm:mt-10">
-              <!-- Kategori -->
-              <p
-                class="text-xs
+        <!-- Tekst -->
+        <div class="mt-9 sm:mt-10">
+          <!-- Kategori -->
+          <p
+            class="text-xs
              font-bold
              tracking-[0.25em]
              text-orange60
              uppercase
              mb-4"
-              >
-                03 — Web Design & Prototyping
-              </p>
+          >
+            03 — Web Design & Prototyping
+          </p>
 
-              <!-- Projektnavn -->
-              <h3
-                class="font-display
+          <!-- Projektnavn -->
+          <h3
+            class="font-display
              text-2xl
              sm:text-3xl
              text-orange60
              leading-tight"
-              >
-                Adeno Website
-              </h3>
+          >
+            Adeno Website
+          </h3>
 
-              <!-- Beskrivelse -->
-              <p
-                class="text-base
+          <!-- Beskrivelse -->
+          <p
+            class="text-base
              sm:text-lg
              leading-relaxed
              mt-5
              max-w-lg"
-              >
-                Together with my colleague, I helped build this website using
-                Nordcraft. I was primarily responsible for the design process
-                and creating the prototype.
-              </p>
+          >
+            Together with my colleague, I helped build this website using
+            Nordcraft. I was primarily responsible for the design process and
+            creating the prototype.
+          </p>
 
-              <!-- Knap -->
-              <a
-                href="https://adeno.dk"
-                target="_blank"
-                class="inline-block
+          <!-- Knap -->
+          <a
+            href="https://adeno.dk"
+            target="_blank"
+            class="inline-block
              mt-7
              bg-orange60
              text-white
@@ -721,64 +753,61 @@ import Linkedin from "../assets/images/linkedin.svg";
              duration-300
              hover:bg-primaryblue60
              hover:text-orange60"
-              >
-                View project →
-              </a>
-            </div>
-          </article>
-          <!-- =========================================
+          >
+            View project →
+          </a>
+        </div>
+      </article>
+      <!-- =========================================
        HERO ANIMATION
   ========================================== -->
-          <style>
-            .hero-name-left {
-              opacity: 0;
-              transform: translateX(-60px);
-              animation: heroFromLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1)
-                forwards;
-            }
+      <style>
+        .hero-name-left {
+          opacity: 0;
+          transform: translateX(-60px);
+          animation: heroFromLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
 
-            .hero-name-right {
-              opacity: 0;
-              transform: translateX(60px);
-              animation: heroFromRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s
-                forwards;
-            }
+        .hero-name-right {
+          opacity: 0;
+          transform: translateX(60px);
+          animation: heroFromRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s
+            forwards;
+        }
 
-            @keyframes heroFromLeft {
-              from {
-                opacity: 0;
-                transform: translateX(-60px);
-              }
+        @keyframes heroFromLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-60px);
+          }
 
-              to {
-                opacity: 1;
-                transform: translateX(0);
-              }
-            }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
 
-            @keyframes heroFromRight {
-              from {
-                opacity: 0;
-                transform: translateX(60px);
-              }
+        @keyframes heroFromRight {
+          from {
+            opacity: 0;
+            transform: translateX(60px);
+          }
 
-              to {
-                opacity: 1;
-                transform: translateX(0);
-              }
-            }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
 
-            @media (prefers-reduced-motion: reduce) {
-              .hero-name-left,
-              .hero-name-right {
-                opacity: 1;
-                transform: none;
-                animation: none;
-              }
-            }
-          </style>
-        </div>
-      </section>
-    </main>
-  </div></MainLayout
->
+        @media (prefers-reduced-motion: reduce) {
+          .hero-name-left,
+          .hero-name-right {
+            opacity: 1;
+            transform: none;
+            animation: none;
+          }
+        }
+      </style>
+    </div>
+  </section>
+</MainLayout>
